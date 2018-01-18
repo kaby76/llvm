@@ -122,7 +122,31 @@ Changes to the C API
 External Open Source Projects Using LLVM 6
 ==========================================
 
-* A project...
+JFS - JIT Fuzzing Solver
+------------------------
+
+`JFS <https://github.com/delcypher/jfs>`_ is an experimental constraint solver
+designed to investigate using coverage guided fuzzing as an incomplete strategy
+for solving boolean, BitVector, and floating-point constraints.
+It is built on top of LLVM, Clang, LibFuzzer, and Z3.
+
+The solver works by generating a C++ program where the reachability of an
+`abort()` statement is equivalent to finding a satisfying assignment to the
+constraints. This program is then compiled by Clang with `SanitizerCoverage
+<https://releases.llvm.org/6.0.0/tools/clang/docs/SanitizerCoverage.html>`_
+instrumentation and then fuzzed using :doc:`LibFuzzer <LibFuzzer>`.
+
+Zig Programming Language
+------------------------
+
+`Zig <http://ziglang.org>`_  is an open-source programming language designed
+for robustness, optimality, and clarity. It is intended to replace C. It
+provides high level features such as Generics,
+Compile Time Function Execution, and Partial Evaluation, yet exposes low level
+LLVM IR features such as Aliases. Zig uses Clang to provide automatic
+import of .h symbols - even inline functions and macros. Zig uses LLD combined
+with lazily building compiler-rt to provide out-of-the-box cross-compiling for
+all supported targets.
 
 
 Additional Information
