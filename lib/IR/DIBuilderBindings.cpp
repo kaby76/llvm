@@ -11,8 +11,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "DIBuilderBindings.h"
-#include "IRBindings.h"
+#include "llvm-c/DIBuilderBindings.h"
+#include "llvm-c/IRBindings.h"
 #include "llvm/IR/DIBuilder.h"
 #include "llvm/IR/IRBuilder.h"
 #include "llvm/IR/Module.h"

@@ -12,6 +12,8 @@ add_llvm_library(LLVMCore
   ConstantRange.cpp
   Constants.cpp
   Core.cpp
+  DIBuilderBindings.cpp
+  IRBindings.cpp
   DIBuilder.cpp
   DataLayout.cpp
   DebugInfo.cpp
